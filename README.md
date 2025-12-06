@@ -1,5 +1,7 @@
 # Simple search engine for MD documents
 
+> **📌 Important:** Setup has been not yet tested on clean envrionment. Code has been not tested and optimized.
+
 ## Development
 
 Requires docker.
