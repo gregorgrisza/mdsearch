@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+sentence-transformers
+symspellpy
+rapidfuzz
+beautifulsoup4
+markdown
+pydantic
+qdrant-client
+debugpy

@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Docs Search</title></head>
+<body><h1>Docs Search</h1>
+<input id="q" type="search" placeholder="Search..."/>
+<div id="results"></div>
+<script>
+let t=null;
+document.getElementById('q').addEventListener('input',e=>{
+  if(t)clearTimeout(t);
+  t=setTimeout(()=>search(e.target.value),2000);
+});
+async function search(q){
+ if(!q)return;
+ let r=await fetch('/search?q='+encodeURIComponent(q));
+ let d=await r.json();
+ document.getElementById('results').innerHTML =
+   d.map(x=>`<div><a href="${x.link}">${x.title}</a></div>`).join('');
+}
+</script>
+</body>
+</html>
