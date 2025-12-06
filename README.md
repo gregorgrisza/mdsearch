@@ -29,7 +29,7 @@ docker compose will create setup closer to production
 
 DevContainer doesn't start services. Services are started by `docker compose up` in two containers.
 One is Qdrant with exposed 6333 and second one is Server with webpage exposing 8000 (www) and 
-5678 (python debuging)
+5678 (python debugging)
 
 ### Server
 
